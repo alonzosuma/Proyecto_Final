@@ -148,6 +148,8 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
         txt_efectivo = new javax.swing.JTextField();
         txt_cambio = new javax.swing.JTextField();
         jButton_calcular_cambio = new javax.swing.JButton();
+        txt_total_pagar1 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
         jButton_RegistrarVenta = new javax.swing.JButton();
         jLabel_wallpaper = new javax.swing.JLabel();
 
@@ -252,39 +254,44 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel8.setText("Total a pagar:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+        jLabel8.setText("Ganancia total:");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("Efectivo:");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel10.setText("Cambio:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
 
         txt_subtotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_subtotal.setEnabled(false);
-        jPanel2.add(txt_subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 120, -1));
+        jPanel2.add(txt_subtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 120, -1));
 
         txt_descuento.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_descuento.setEnabled(false);
-        jPanel2.add(txt_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 120, -1));
+        jPanel2.add(txt_descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 120, -1));
 
         txt_iva.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_iva.setEnabled(false);
-        jPanel2.add(txt_iva, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 120, -1));
+        jPanel2.add(txt_iva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 80, 120, -1));
 
         txt_total_pagar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_total_pagar.setEnabled(false);
-        jPanel2.add(txt_total_pagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 120, -1));
+        txt_total_pagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_total_pagarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txt_total_pagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 120, -1));
 
         txt_efectivo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel2.add(txt_efectivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 120, -1));
+        jPanel2.add(txt_efectivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 120, -1));
 
         txt_cambio.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_cambio.setEnabled(false);
-        jPanel2.add(txt_cambio, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 120, -1));
+        jPanel2.add(txt_cambio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 120, -1));
 
         jButton_calcular_cambio.setBackground(new java.awt.Color(51, 255, 255));
         jButton_calcular_cambio.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -294,9 +301,17 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
                 jButton_calcular_cambioActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton_calcular_cambio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 130, 50));
+        jPanel2.add(jButton_calcular_cambio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 150, 130, 50));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 380, 210));
+        txt_total_pagar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txt_total_pagar1.setEnabled(false);
+        jPanel2.add(txt_total_pagar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 120, -1));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel11.setText("Total a pagar:");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 410, 260));
 
         jButton_RegistrarVenta.setBackground(new java.awt.Color(51, 255, 255));
         jButton_RegistrarVenta.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -309,7 +324,7 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
                 jButton_RegistrarVentaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton_RegistrarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 170, 100));
+        getContentPane().add(jButton_RegistrarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 170, 100));
         getContentPane().add(jLabel_wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 570));
 
         pack();
@@ -530,6 +545,10 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
 
     }//GEN-LAST:event_jButton_RegistrarVentaActionPerformed
 
+    private void txt_total_pagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_total_pagarActionPerformed
+
+    }//GEN-LAST:event_txt_total_pagarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton_RegistrarVenta;
@@ -540,6 +559,7 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jComboBox_producto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -561,6 +581,7 @@ public class InterFacturacion extends javax.swing.JInternalFrame {
     private javax.swing.JTextField txt_iva;
     private javax.swing.JTextField txt_subtotal;
     public static javax.swing.JTextField txt_total_pagar;
+    public static javax.swing.JTextField txt_total_pagar1;
     // End of variables declaration//GEN-END:variables
 
 
